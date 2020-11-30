@@ -4,7 +4,7 @@ EXE=$(SRC:.cpp=)
 all: $(EXE)
 
 LDFLAGS=-L ../lib -lxbyak_aarch64
-CFLAGS=-g -DNDEBUG -Wall -Wextra -I ../
+CFLAGS=-std=c++11 -g -DNDEBUG -Wall -Wextra -I ../
 ifneq ($(DEBUG),1)
 CFLAGS+=-O2
 endif
