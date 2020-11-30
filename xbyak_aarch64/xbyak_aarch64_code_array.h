@@ -48,9 +48,9 @@ public:
     const size_t alignedSizeM1 = inner::getPageSize() - 1;
     size = (size + alignedSizeM1) & ~alignedSizeM1;
 #ifdef MAP_ANONYMOUS
-    const int mode = MAP_PRIVATE | MAP_ANONYMOUS;
+    int mode = MAP_PRIVATE | MAP_ANONYMOUS;
 #elif defined(MAP_ANON)
-    const int mode = MAP_PRIVATE | MAP_ANON;
+    int mode = MAP_PRIVATE | MAP_ANON;
 #else
 #error "not supported"
 #endif
